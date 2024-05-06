@@ -8,7 +8,6 @@ import SessionWrapper from "../SesionProvider"
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-import NetworkStatusComponent from "@/components/NetworkStatus/NetworkStatusComponent";
 
 export const metadata: Metadata = {
   title: {
@@ -47,7 +46,6 @@ export default function RootLayout({
         <StoreProvider>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <NetworkStatusComponent />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
