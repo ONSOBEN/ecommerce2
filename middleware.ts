@@ -14,12 +14,10 @@ export function middleware(request: NextRequest) {
 
 	if (!session) {
 		return NextResponse.redirect(new URL("/login", request.url).toString());
-	}else{
-		return NextResponse.redirect(new URL("/", request.url).toString());
 	}
 }
 
 // multiple middleware
 export const config = {
-	matcher: ["/myshop",'/add',"/edit",'/delete','/logout'],
+	matcher: ["/myshop"],
 };
