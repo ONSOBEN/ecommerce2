@@ -12,12 +12,11 @@ import { HiOutlineExclamationCircle } from "react-icons/hi";
 const placeHolderImage = 'https://via.placeholder.com/150'
 
 
-export default function myshop() {
-  const router=useRouter()
+export default function MyShop() {
+
   const  [loading,setLoading]=useState(false)
   const[productdetail,setProductDetail]=useState<ProductType>()
 
-  //get data from RTK query
    const {data,isLoading}=useGetProductsQuery({page:1,pageSize:20})
    const [products, setProducts] = useState([]);
 
